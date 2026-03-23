@@ -26,7 +26,7 @@ if "detailed_answer" not in st.session_state:
 left_col, right_col = st.columns([1.1, 1.7], gap="large")
 
 with left_col:
-    st.image("images/maize_side.jpg", use_container_width=True)
+    #st.image("images/maize_side.jpg", use_container_width=True)
     st.markdown(
         """
         <style>

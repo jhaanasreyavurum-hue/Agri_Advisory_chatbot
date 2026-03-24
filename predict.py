@@ -1,5 +1,5 @@
 import os
-import urllib.request
+import gdown
 import torch
 import torch.nn as nn
 from torchvision import models, transforms

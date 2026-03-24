@@ -13,7 +13,6 @@ maize_url = "https://drive.google.com/uc?export=download&id=1BXdS0khtYvGhAVLi9aq
 disease_url = "https://drive.google.com/uc?export=download&id=1SSwyapIc8wYIVn4UiVaaJ7_zJc3g0JXf"
 pest_url = "https://drive.google.com/uc?export=download&id=1QipEeKTWcVG9lol7dV32WZMFHRowDl_i"
 
-print("Checking file size:", os.path.getsize("models/maize_check_model.pth"))
 # -------------------------
 # CLASS LABELS
 # -------------------------
@@ -41,9 +40,10 @@ def download_file(url, path):
         folder = os.path.dirname(path)
         if folder:
             os.makedirs(folder, exist_ok=True)
-        print(f"Downloading {path} from {url} ...")
-        urllib.request.urlretrieve(url, path)
+        print(f"Downloading {path}...")
+        gdown.download(url, path, quiet=False, fuzzy=True)
 
+print("Checking file size:", os.path.getsize("models/maize_check_model.pth"))    
 # -------------------------
 # LOAD MODELS
 # -------------------------

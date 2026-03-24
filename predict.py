@@ -71,7 +71,7 @@ def predict_image(image, maize_model, disease_model, pest_model):
         maize_label = maize_classes[maize_pred.item()]
         maize_confidence = round(maize_conf.item() * 100, 2)
 
-        if maize_label == "not_maize" or maize_confidence < 70:
+        if maize_label == "not_maize" or maize_confidence < 85:
             return "not_maize", maize_confidence, "maize_check"
 
         disease_output = disease_model(img_tensor)

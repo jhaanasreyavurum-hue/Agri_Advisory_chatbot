@@ -9,3 +9,4 @@ Pillow
 gTTS
 SpeechRecognition
 deep-translator
+gdown
